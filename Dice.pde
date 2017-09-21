@@ -1,16 +1,26 @@
 
 Die bob;
+
 void setup()
 {
 size(300,300);
-    noLoop();
+noLoop();
 }
 
 void draw()
 {
 background(#CBE9F2);
-bob = new Die(10,10);
-bob.show();
+int numDots = 0;
+ for (int y = 30; y <250; y+=60)
+ {
+   for (int x = 30; x<250; x+=60)
+   {
+    bob = new Die(10,10);
+    bob.show();
+    numDots = numDots + score;
+}
+}
+ text("Total Score: " + numDots, 150,250)
     //your code here
 }
 
