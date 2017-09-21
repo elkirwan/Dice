@@ -15,7 +15,7 @@ int numDots = 0;
  {
    for (int x = 30; x<250; x+=60)
    {
-    bob = new Die(10,10);
+    bob = new Die(x,y);
     bob.show();
     numDots = numDots + score;
 }
