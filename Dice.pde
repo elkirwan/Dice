@@ -5,17 +5,20 @@ void setup()
 size(300,300);
     noLoop();
 }
+
 void draw()
 {
 background(#CBE9F2);
 bob = new Die(10,10);
-bob.show;
+bob.show();
     //your code here
 }
+
 void mousePressed()
 {
     redraw();
 }
+
 class Die //models one single dice cube
 {
 int myX, int myY;
@@ -28,11 +31,10 @@ myX=x;
 roll();
         //variable initializations here
     }
-    void roll()
+ void roll()
     {
 score = (int)(Math.random()*6+1);
-
-}
+    }
 
         //your code here
     }
@@ -41,29 +43,29 @@ score = (int)(Math.random()*6+1);
 fill(#A2F0DB);
 rect(myY,myX,50,50);
 fill(0);
-If score = 1
+if (score == 1)
 {
 ellipse(myX,myY,5,5);
 }
-else if (score = 2)
+else if (score == 2)
 {
 ellipse(myX+6,myY-5,5,5);
 ellipse(myX-6,myY+6,5,5);
 }
-else if(score = 3)
+else if(score == 3)
 {
 ellipse(myX,myY,5,5);
 ellipse(myX+6,myY-6,5,5);
 ellipse(myX-6,myY+6,5,5);
 }
-else if (score = 4)
+else if (score == 4)
 {
 ellipse(myX+6,myY-5,5,5);
 ellipse(myX-6,myY+6,5,5);
 ellipse(myX+6,myY+6,5,5);
 ellipse(myX-6,myY-6,5,5);
 }
-else if (score = 5)
+else if (score == 5)
 {
  ellipse(myX+6,myY-5,5,5);
 ellipse(myX-6,myY+6,5,5);
