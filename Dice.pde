@@ -21,8 +21,7 @@ void mousePressed()
 
 class Die //models one single dice cube
 {
-int myX, int myY;
-int score;
+int myX, int myY, int score;
     //variable declarations here
     Die(int x, int y) //constructor
     {
@@ -37,7 +36,7 @@ score = (int)(Math.random()*6+1);
     }
 
         //your code here
-    }
+    
     void show()
     {
 fill(#A2F0DB);
@@ -78,4 +77,5 @@ else
 ellipse(myX,myY,5,5)//fix this one
     //your code here
     }
+}
 }
