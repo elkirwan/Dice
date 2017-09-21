@@ -8,7 +8,7 @@ size(300,300);
 void draw()
 {
 background(#CBE9F2);
-bob = new Die(x,y);
+bob = new Die(10,10);
 bob.show;
     //your code here
 }
