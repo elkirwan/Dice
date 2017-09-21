@@ -1,4 +1,3 @@
-
 Die bob;
 
 void setup()
@@ -20,7 +19,7 @@ int numDots = 0;
     numDots = numDots + score;
 }
 }
- text("Total Score: " + numDots, 150,250)
+ text("Total Score: " + numDots, 150,250);
     //your code here
 }
 
@@ -31,7 +30,9 @@ void mousePressed()
 
 class Die //models one single dice cube
 {
-int myX, int myY, int score;
+int myX;
+int myY;
+int score;
     //variable declarations here
     Die(int x, int y) //constructor
     {
@@ -84,8 +85,9 @@ ellipse(myX,myY,5,5);
  }
 else 
 {
-ellipse(myX,myY,5,5)//fix this one
+ellipse(myX,myY,5,5);//fix this one
     //your code here
     }
 }
 }
+
