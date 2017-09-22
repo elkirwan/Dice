@@ -1,4 +1,4 @@
-int score;
+int total=0;
 void setup()
 {
 size(300,300);
@@ -8,7 +8,7 @@ noLoop();
 void draw()
 {
 background(#109B82);
-int numDots = 0;
+
 
 
  for (int y = 30; y <250; y+=60)
@@ -17,18 +17,20 @@ int numDots = 0;
    {
     Die bob = new Die(x,y);
     bob.show();
+    total +=bob.score;
    
     
-    numDots = numDots + score;
+    //numDots = numDots + score;
 }
 }
 textSize(25);
-text("Total Score: " + numDots,30,290);
+text("Total Score: " + total,30,290);
     //your code here
 }
 
 void mousePressed()
 {
+  total =0;
     redraw();
 }
 
