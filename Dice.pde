@@ -1,3 +1,4 @@
+int score;
 void setup()
 {
 size(300,300);
@@ -7,7 +8,7 @@ noLoop();
 void draw()
 {
 background(#109B82);
-//int numDots = 0;
+int numDots = 0;
 
 
  for (int y = 30; y <250; y+=60)
@@ -18,10 +19,11 @@ background(#109B82);
     bob.show();
    
     
-  //  numDots = numDots + score;
+    numDots = numDots + score;
 }
 }
-//text("Total Score: " + numDots, 150,250);
+textSize(25);
+text("Total Score: " + numDots,30,290);
     //your code here
 }
 
@@ -41,6 +43,7 @@ int score;
 roll();
 myY=y;
 myX=x;
+
 
 
         //variable initializations here
@@ -97,7 +100,7 @@ ellipse(myX+40,myY+10,10,10);
 ellipse(myX+10,myY+40,10,10);
 ellipse(myX+40,myY+40,10,10);
 ellipse(myX+10,myY+10,10,10);
-//fix this one
+
     //your code here
     }
   
