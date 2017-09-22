@@ -1,5 +1,3 @@
-Die bob;
-
 void setup()
 {
 size(300,300);
@@ -8,18 +6,22 @@ noLoop();
 
 void draw()
 {
-background(#CBE9F2);
-int numDots = 0;
+background(#109B82);
+//int numDots = 0;
+
+
  for (int y = 30; y <250; y+=60)
  {
    for (int x = 30; x<250; x+=60)
    {
-    bob = new Die(x,y);
+    Die bob = new Die(x,y);
     bob.show();
-    numDots = numDots + score;
+   
+    
+  //  numDots = numDots + score;
 }
 }
- text("Total Score: " + numDots, 150,250);
+//text("Total Score: " + numDots, 150,250);
     //your code here
 }
 
@@ -36,14 +38,17 @@ int score;
     //variable declarations here
     Die(int x, int y) //constructor
     {
+roll();
 myY=y;
 myX=x;
-roll();
+
+
         //variable initializations here
     }
  void roll()
     {
-score = (int)(Math.random()*6+1);
+score = (int)((Math.random()*6)+1);
+println(score);
     }
 
         //your code here
@@ -51,43 +56,52 @@ score = (int)(Math.random()*6+1);
     void show()
     {
 fill(#A2F0DB);
-rect(myY,myX,50,50);
+rect(myX,myY,50,50,5);
+
 fill(0);
 if (score == 1)
 {
-ellipse(myX,myY,5,5);
+ellipse(myX+25,myY+25,10,10);
 }
 else if (score == 2)
 {
-ellipse(myX+6,myY-5,5,5);
-ellipse(myX-6,myY+6,5,5);
+ellipse(myX+40,myY+10,10,10);
+ellipse(myX+10,myY+40,10,10);
 }
 else if(score == 3)
 {
-ellipse(myX,myY,5,5);
-ellipse(myX+6,myY-6,5,5);
-ellipse(myX-6,myY+6,5,5);
+ellipse(myX+25,myY+25,10,10);
+ellipse(myX+40,myY+10,10,10);
+ellipse(myX+10,myY+40,10,10);
 }
 else if (score == 4)
 {
-ellipse(myX+6,myY-5,5,5);
-ellipse(myX-6,myY+6,5,5);
-ellipse(myX+6,myY+6,5,5);
-ellipse(myX-6,myY-6,5,5);
+ellipse(myX+40,myY+10,10,10);
+ellipse(myX+10,myY+40,10,10);
+ellipse(myX+40,myY+40,10,10);
+ellipse(myX+10,myY+10,10,10);
 }
 else if (score == 5)
 {
- ellipse(myX+6,myY-5,5,5);
-ellipse(myX-6,myY+6,5,5);
-ellipse(myX+6,myY+6,5,5);
-ellipse(myX-6,myY-6,5,5);
-ellipse(myX,myY,5,5);
+ ellipse(myX+40,myY+10,10,10);
+ellipse(myX+10,myY+40,10,10);
+ellipse(myX+40,myY+40,10,10);
+ellipse(myX+10,myY+10,10,10);
+ellipse(myX+25,myY+25,10,10);
  }
-else 
+else
 {
-ellipse(myX,myY,5,5);//fix this one
+ellipse(myX+10,myY+25,10,10);
+ellipse(myX+40,myY+25,10,10);
+ellipse(myX+40,myY+10,10,10);
+ellipse(myX+10,myY+40,10,10);
+ellipse(myX+40,myY+40,10,10);
+ellipse(myX+10,myY+10,10,10);
+//fix this one
     //your code here
     }
+  
 }
 }
+
 
