@@ -53,7 +53,7 @@ myX=x;
  void roll()
     {
 score = (int)((Math.random()*6)+1);
-println(score);
+
     }
 
         //your code here
